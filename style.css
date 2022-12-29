@@ -25,14 +25,15 @@ body {
 }
 
 .centar,
-.centar-nov {
+.favorites {
     width: 90%;
     margin: auto;
     padding: 100px 0;
 }
 
 .btn-top,
-.btn-back-to-list {
+.btn-back-to-list,
+.btn-back {
     padding: 10px 25px;
     border: none;
     cursor: pointer;
@@ -47,8 +48,7 @@ body {
     background-color: rgba(171, 25, 255, 0.7);
 }
 
-.items,
-.nov-items {
+.items {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -155,15 +155,13 @@ body {
     height: 50px;
     cursor: pointer;
 
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 80px);
-    justify-content: start;
+    display: flex;
     align-items: center;
-    gap: 5px;
 }
 
 .btn-footer>div {
+    width: 100px;
+    margin: 0 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,3 +216,5 @@ body {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
+/* /////////////////////////////////////////////////////// */

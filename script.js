@@ -187,137 +187,69 @@ function buttonElement(totalPage, page) {
     showBtn.innerHTML = divTag;
 }
 
+
+
+
 //////////////////////////////////////////////////////////
 // ADD TO FAVORITES
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const favoritesItems = document.querySelector('.favorites-items');
+const btnBackFavorites = document.querySelector('.btn-back-favorites');
+const favorites = document.querySelector('.favorites');
+
+items.addEventListener('click', favoriteCountry)
+
+function favoriteCountry(ele) {
+    if (ele.target.classList.contains('item-btn')) {
+        let parent = ele.target.parentElement;
+
+        favoritesItems.appendChild(parent)
+        parent.children[1].classList.add('remove')
+        ele.target.style.backgroundColor = 'red';
+        parent.children[1].innerHTML = 'remove from favorites';
+    }
+}
+
+/////////////////////////////////////////////////////
+// REMOVE ELEMENT
+
+favoritesItems.addEventListener('click', removeCountry);
+
+function removeCountry(e) {
+    if (e.target.classList.contains('remove')) {
+        let parent = e.target.parentElement;
+        let proba = favoritesItems.removeChild(parent)
+        items.prepend(proba)
+        e.target.style.backgroundColor = 'rgb(171, 25, 255)';
+        parent.children[1].innerHTML = 'add to favorites';
+    }
+}
+
+
+///////////////////////////////////////////////////////
 
 
 
 function countryInfo() {
     zaedno.classList.add('hide')
     popUp.classList.remove('hide')
+    favorites.classList.add('hide')
 }
 
 function returnFromInfo() {
     zaedno.classList.remove('hide')
     popUp.classList.add('hide')
+}
+
+function goToFavorites() {
+    zaedno.classList.add('hide')
+    favorites.classList.remove('hide')
+    popUp.classList.add('hide')
+}
+
+function backFromFavorites() {
+    zaedno.classList.remove('hide')
+    favorites.classList.add('hide')
 }
 
 
