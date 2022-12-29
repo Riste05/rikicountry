@@ -61,7 +61,6 @@ function getCountry(e) {
             })
         })
     }
-
 }
 
 ///////////////////////////////////////////////
@@ -198,6 +197,7 @@ const btnBackFavorites = document.querySelector('.btn-back-favorites');
 const favorites = document.querySelector('.favorites');
 
 items.addEventListener('click', favoriteCountry)
+favoritesItems.addEventListener('click', getCountry)
 
 function favoriteCountry(ele) {
     if (ele.target.classList.contains('item-btn')) {
@@ -208,6 +208,7 @@ function favoriteCountry(ele) {
         ele.target.style.backgroundColor = 'red';
         parent.children[1].innerHTML = 'remove from favorites';
     }
+
 }
 
 /////////////////////////////////////////////////////
