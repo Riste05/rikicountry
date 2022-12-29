@@ -229,7 +229,6 @@ function removeCountry(e) {
 ///////////////////////////////////////////////////////
 
 
-
 function countryInfo() {
     zaedno.classList.add('hide')
     popUp.classList.remove('hide')
